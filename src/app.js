@@ -7,6 +7,7 @@ const forecast=require('./utils/forecast')
 const chalk = require('chalk');
 
 const app=express()
+const port=process.env.PORT || 3000
 
 //Define path for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -20,7 +21,6 @@ hbs.registerPartials(partialPath)
 
 //setup static directory to serve
 app.use(express.static(publicDirectoryPath))
-console.log("for git")
 app.get('', (req, res) => {
     res.render('index',
     {
@@ -95,8 +95,8 @@ app.get('*',(req,res)=>{
 
     })
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
-    console.log("Listining on port 3000");
+    console.log("Listining on port "+port);
     
 })
