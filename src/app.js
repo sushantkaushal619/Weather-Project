@@ -20,8 +20,7 @@ hbs.registerPartials(partialPath)
 
 //setup static directory to serve
 app.use(express.static(publicDirectoryPath))
-
-
+console.log("for git")
 app.get('', (req, res) => {
     res.render('index',
     {
