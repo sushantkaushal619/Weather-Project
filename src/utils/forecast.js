@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const request=require('request')
 const forecast=(latitude,longitude,callback)=>{
-    const url='http://api.weatherstack.com/current?access_key=256c542d09a859c85ee69dc453a03bfa&query='+latitude+','+longitude
+    const url='http://api.weatherstack.com/current?access_key="write your own API Key"&query='+latitude+','+longitude
 
     request({url:url,json:true},(error,response)=>
     {
